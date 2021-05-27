@@ -8,6 +8,10 @@
   </a>
 </p>
 
+## Meter fork
+
+Removes negroni, iris, and other third party HTTP integrations.
+
 # Official Sentry SDK for Go
 
 [![Build Status](https://github.com/getsentry/sentry-go/workflows/go-workflow/badge.svg)](https://github.com/getsentry/sentry-go/actions?query=workflow%3Ago-workflow)
