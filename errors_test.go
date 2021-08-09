@@ -1,8 +1,6 @@
 package sentry
 
 import (
-	goErrors "github.com/go-errors/errors"
-	pingcapErrors "github.com/pingcap/errors"
 	pkgErrors "github.com/pkg/errors"
 )
 
@@ -18,20 +16,4 @@ func RedPkgErrorsRanger() error {
 
 func BluePkgErrorsRanger() error {
 	return pkgErrors.New("this is bad from pkgErrors")
-}
-
-func RedPingcapErrorsRanger() error {
-	return BluePingcapErrorsRanger()
-}
-
-func BluePingcapErrorsRanger() error {
-	return pingcapErrors.New("this is bad from pingcapErrors")
-}
-
-func RedGoErrorsRanger() error {
-	return BlueGoErrorsRanger()
-}
-
-func BlueGoErrorsRanger() error {
-	return goErrors.New("this is bad from goErrors")
 }

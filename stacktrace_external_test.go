@@ -4,8 +4,6 @@ import (
 	"path/filepath"
 	"testing"
 
-	goErrors "github.com/go-errors/errors"
-	pingcapErrors "github.com/pingcap/errors"
 	pkgErrors "github.com/pkg/errors"
 
 	"github.com/google/go-cmp/cmp"
@@ -31,22 +29,6 @@ func RedPkgErrorsRanger() error {
 
 func BluePkgErrorsRanger() error {
 	return pkgErrors.New("this is bad from pkgErrors")
-}
-
-func RedPingcapErrorsRanger() error {
-	return BluePingcapErrorsRanger()
-}
-
-func BluePingcapErrorsRanger() error {
-	return pingcapErrors.New("this is bad from pingcapErrors")
-}
-
-func RedGoErrorsRanger() error {
-	return BlueGoErrorsRanger()
-}
-
-func BlueGoErrorsRanger() error {
-	return goErrors.New("this is bad from goErrors")
 }
 
 //nolint: scopelint // false positive https://github.com/kyoh86/scopelint/issues/4
@@ -127,40 +109,6 @@ func TestExtractStacktrace(t *testing.T) {
 					Function: "BluePkgErrorsRanger",
 					Module:   "github.com/getsentry/sentry-go_test",
 					Lineno:   33,
-					InApp:    true,
-				},
-			},
-		}},
-		// https://github.com/pingcap/errors
-		"pingcap/errors": {RedPingcapErrorsRanger, &sentry.Stacktrace{
-			Frames: []sentry.Frame{
-				{
-					Function: "RedPingcapErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
-					Lineno:   37,
-					InApp:    true,
-				},
-				{
-					Function: "BluePingcapErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
-					Lineno:   41,
-					InApp:    true,
-				},
-			},
-		}},
-		// https://github.com/go-errors/errors
-		"go-errors/errors": {RedGoErrorsRanger, &sentry.Stacktrace{
-			Frames: []sentry.Frame{
-				{
-					Function: "RedGoErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
-					Lineno:   45,
-					InApp:    true,
-				},
-				{
-					Function: "BlueGoErrorsRanger",
-					Module:   "github.com/getsentry/sentry-go_test",
-					Lineno:   49,
 					InApp:    true,
 				},
 			},
