@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cdn77/sentry-go"
 )
 
 func main() {

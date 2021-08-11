@@ -9,7 +9,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cdn77/sentry-go"
 )
 
 func f1() *sentry.Stacktrace {

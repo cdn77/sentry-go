@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/getsentry/sentry-go"
-	sentryhttp "github.com/getsentry/sentry-go/http"
+	"github.com/cdn77/sentry-go"
+	sentryhttp "github.com/cdn77/sentry-go/http"
 )
 
 // For a longer and executable example, see

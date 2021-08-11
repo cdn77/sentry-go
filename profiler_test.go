@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/getsentry/sentry-go/internal/testutils"
+	"github.com/cdn77/sentry-go/internal/testutils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
