@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/getsentry/sentry-go/internal/debug"
+	"github.com/cdn77/sentry-go/internal/debug"
 )
 
 // The identifier of the SDK.

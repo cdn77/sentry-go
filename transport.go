@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/getsentry/sentry-go/internal/ratelimit"
+	"github.com/cdn77/sentry-go/internal/ratelimit"
 )
 
 const defaultBufferSize = 30
