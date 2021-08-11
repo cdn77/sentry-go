@@ -1,4 +1,4 @@
-module github.com/getsentry/sentry-go
+module github.com/cdn77/sentry-go
 
 go 1.16
 
