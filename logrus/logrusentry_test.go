@@ -14,7 +14,7 @@ import (
 	pkgerr "github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cdn77/sentry-go"
 )
 
 func TestNew(t *testing.T) {
