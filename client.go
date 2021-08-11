@@ -17,7 +17,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/getsentry/sentry-go/internal/debug"
+	"github.com/cdn77/sentry-go/internal/debug"
 )
 
 // maxErrorDepth is the maximum number of errors reported in a chain of errors.

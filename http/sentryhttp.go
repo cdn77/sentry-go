@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/cdn77/sentry-go"
 )
 
 // A Handler is an HTTP middleware factory that provides integration with
